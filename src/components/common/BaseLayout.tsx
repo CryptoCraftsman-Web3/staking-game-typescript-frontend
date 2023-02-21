@@ -1,7 +1,47 @@
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 import { Outlet, useLocation } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
+
 import { useEffect, useState } from "react";
+import NotificationToaster from "./NotificationToaster";
+
+
+// export const notify = ({ message }: { message: string }) =>
+//   toast.custom(
+//     (t) => (
+//       <div
+//         className={clsx([
+//           "notificationWrapper",
+//           t.visible ? "bottom-0" : "-bottom-96",
+//         ])}
+//       >
+//         <div className="iconWrapper">
+//           sf
+//         </div>
+//         <div className="toaster" >
+//           <div className="go2072408551">
+//             <div className="go685806154">
+//               <div className="go1858758034"></div><div className="go1579819456">
+//                 <div className="go2534082608">
+//                 </div>
+//               </div>
+//             </div>
+//             <div role="status" aria-live="polite" className="go3958317564">unknown account #0</div>
+//           </div>
+//           <div className="contentWrapper">
+//             <h1>New version available</h1>
+//             <p>
+//               An improved version of VESSEL is now available, refresh to update.
+//             </p>
+//           </div>
+//           <div className="closeIcon" onClick={() => toast.dismiss(t.id)}>
+//           </div>
+//         </div>
+//       </div>
+//     ),
+//     { id: "unique-notification", position: "bottom-center" }
+//   );
 
 const BaseLayout: React.FC<{}> = () => {
   const [openSideBar, setOpenSideBar] = useState(false)
@@ -30,6 +70,7 @@ const BaseLayout: React.FC<{}> = () => {
           }
           <Outlet />
         </div>
+        <NotificationToaster />
       </main >
     </div >
   );

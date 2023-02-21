@@ -70,3 +70,50 @@
 .Dashboard_button:hover::after {
   box-shadow: 0 0 8px 0.1px #ed80fd;
 }
+
+.notificationWrapper {
+  @apply flex flex-row items-center justify-between w-96 bg-gray-900 px-4 py-6 text-white shadow-2xl hover:shadow-none transform-gpu translate-y-0 hover:translate-y-1 rounded-xl relative transition-all duration-500 ease-in-out;
+}
+
+.iconWrapper {
+  @apply text-xl;
+}
+
+.contentWrapper {
+  @apply flex flex-col items-start justify-center ml-4 cursor-default;
+}
+
+.contentWrapper h1 {
+  @apply text-base text-gray-200 font-semibold leading-none tracking-wider;
+}
+
+.contentWrapper p {
+  @apply text-sm text-gray-400 mt-2 leading-relaxed tracking-wider;
+}
+
+.closeIcon {
+  @apply absolute top-2 right-2 cursor-pointer text-lg;
+}
+
+.toaster {
+  left: 0px; 
+  right: 0px; 
+  display: flex;
+  position: absolute;
+  transition: all 230ms cubic-bezier(0.21, 1.02, 0.73, 1) 0s;
+  transform: translateY(0px);
+  bottom: 0px;
+  justify-content: center;
+  }
+
+  .toaster_{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 999rem; 
+    background: rgb(34, 34, 34); 
+    border: 1px solid rgb(40, 40, 40); 
+    color: rgb(255, 255, 255); 
+    animation: 0.4s cubic-bezier(0.06, 0.71, 0.55, 1) 0s 1 normal forwards running 
+    
+  }

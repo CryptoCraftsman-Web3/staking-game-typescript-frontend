@@ -1,8 +1,12 @@
+import { useState } from "react";
 import HeaderCard from "../components/common/HeaderCard";
+import clsx from "clsx";
+import { errorNotify } from "../components/common/NotificationToaster";
 
 type Props = {};
 
 function AccountPage(props: Props) {
+  const [selectAccount, setSelectAccount] = useState(false)
   return (
     <div className="h-full relative flex flex-col items-center">
       <HeaderCard />
@@ -34,7 +38,7 @@ function AccountPage(props: Props) {
         </div>
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 pr-[5px] relative mt-2">
           <div className="absolute flex gap-2 left-0 -translate-y-full -top-2 text-white">
-            <button className="Dashboard_button font-medium py-2 px-4 rounded-sm relative z-10">
+            <button onClick={() => errorNotify({ message: "unknown account #0" })} className="Dashboard_button font-medium py-2 px-4 rounded-sm relative z-10">
               Claim All
             </button>
             <button className="Dashboard_button font-medium py-2 px-4 rounded-sm relative z-10">
@@ -42,16 +46,22 @@ function AccountPage(props: Props) {
             </button>
           </div>
           <div className="absolute flex gap-2 right-0 -translate-y-full -top-2 text-white">
-            <button className="Dashboard_button hidden lg:block font-medium py-2 px-4 rounded-sm relative z-10">
-              Select
+            <button className={
+              clsx(
+                "Dashboard_button transition duration-150  font-medium py-2 px-4 rounded-sm relative z-10",
+                selectAccount ? "flex lg:block" : "hidden"
+              )
+            }>Copy IDs</button>
+            <button onClick={() => setSelectAccount(prev => !prev)} className="Dashboard_button hidden lg:block font-medium py-2 px-4 rounded-sm relative z-10">
+              {selectAccount ? "Unselect" : "Select"}
             </button>
-            <label className="Dashboard_button hidden lg:block px-2 py-2 text-white relative cursor-pointer">
+            <label className="Dashboard_button gap-x-1 hidden lg:block px-2 py-2 text-white relative cursor-pointer">
               Hide retired
               <input
                 type="checkbox"
                 name=""
                 id=""
-                className="accent-pinky"
+                className="accent-pinky px-2"
               />
             </label>
           </div>
