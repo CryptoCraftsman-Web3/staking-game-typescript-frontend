@@ -1,0 +1,21 @@
+.Sidebar_navLink,
+.Sidebar_navLink:after {
+    transition-duration: .15s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+
+.Sidebar_active:after {
+    --tw-bg-opacity: 1;
+    background-color: rgb(209 138 220/var(--tw-bg-opacity));
+    box-shadow: 0 0 8px 0.1px #ed80fd;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    -webkit-transform: skew(-15deg);
+    transform: skew(-15deg);
+    width: 100%;
+    z-index: -1;
+}

@@ -1,0 +1,32 @@
+.Dashboard_heading:after {
+    background: #ed80fd;
+    bottom: 0;
+    box-shadow: 0 0 15px 5px #ed80fd;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 110%;
+}
+
+.Dashboard_card:after,
+.Header_card:after {
+    bottom: -5px;
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: -5px;
+    width: 100%;
+    z-index: -1;
+}
+
+.Dashboard_card:after {
+    background: #ed80fd;
+}
+
+
+.Header_card:after {
+    background: #01eeff;
+}

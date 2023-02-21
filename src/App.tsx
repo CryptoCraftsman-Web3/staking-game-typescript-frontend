@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { BaseLayout } from './components/common';
+import { DashboardPage, NotFoundPage, AccountPage, BlackMarketPage, StashHousePage } from './pages';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<BaseLayout />}>
+          <Route index element={<Navigate to="/dashboard" replace={true} />} />
+          <Route path="dashboard" element={<DashboardPage />} />
+          <Route path="account" element={<AccountPage />} />
+          <Route path="swap" element={<BlackMarketPage />} />
+          <Route path="stashhouse" element={<StashHousePage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
