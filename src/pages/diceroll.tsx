@@ -22,7 +22,7 @@ const DiceRollPage = (props: Props) => {
                         </div>
                     </div>
                     <div className="w-full flex justify-center gap-8">
-                        <div className="Dashboard_card__2gsFM relative bg-darky text-white text-center flex flex-col w-full md:w-4/5 2xl:w-1/2 p-6">
+                        <div className="Dashboard_card relative bg-darky text-white text-center flex flex-col w-full md:w-4/5 2xl:w-1/2 p-6">
                             <div className="flex w-full flex-col">
                                 <div className="flex justify-between">
                                     <div className="opacity-50">Bet amount</div>
@@ -95,7 +95,7 @@ const DiceRollPage = (props: Props) => {
                         history
                     </h1>
                     <div className="w-full flex justify-center gap-8">
-                        <div className="Dashboard_card__2gsFM relative bg-darky text-white text-center flex flex-col w-full md:w-4/5 2xl:w-1/2 p-6">
+                        <div className="Dashboard_card relative bg-darky text-white text-center flex flex-col w-full md:w-4/5 2xl:w-1/2 p-6">
                             <table className="table-fixed w-full">
                                 <thead>
                                     <tr className="opacity-50 text-sm border-b border-pinky pb-2">
