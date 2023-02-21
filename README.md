@@ -1,3 +1,14 @@
+## Staking game
+
+Fork of the bandit project.
+
+https://www.thebanditproject.app/
+
+- Planning Board
+- Crew
+- Black Market
+- Stash House
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
