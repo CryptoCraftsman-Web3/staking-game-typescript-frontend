@@ -1,29 +1,12 @@
-import React from "react";
-import styles from "./dashboard.module.css"
-import { clsx } from "clsx";
+import HeaderCard from "../components/common/HeaderCard";
 
 type Props = {};
 
-function AccountPage({ }: Props) {
+function AccountPage(props: Props) {
   return (
-    <div className="h-full relative w-10/12 flex flex-col items-center">
-      <div className="w-10/12 relative ">
-        <div className={
-          clsx(
-            " hidden lg:flex absolute bg-black px-4 h-12 left-0 top-10 text-cyan-400 justify-center items-center",
-            styles.Header_card
-          )
-        }>
-          $0.2102
-        </div>
-        <div className={clsx(
-          " hidden lg:flex justify-self-center  absolute bg-black px-4 h-12 right-0 top-10 text-cyan-400 justify-center items-center cursor-pointer gap-2",
-          styles.Header_card
-        )}>
-          <button className="h-full">Connect Wallet</button>
-        </div>
-      </div>
-      <div className=" flex flex-col justify-center items-center w-10/12 flex-1 pt-36 gap-y-5">
+    <div className="h-full relative flex flex-col items-center">
+      <HeaderCard />
+      <div className=" flex flex-col justify-center items-center w-11/12 flex-1 pt-36 gap-y-5">
         <h1 className="Dashboard_heading__SF4VX font-pricedown text-4xl md:text-6xl text-white relative pb-4 mb-4">
           crew stats
         </h1>
@@ -49,27 +32,26 @@ function AccountPage({ }: Props) {
             crew members
           </h1>
         </div>
-        <div className="w-full grid grid-cols-2 biglp:grid-cols-4 2xl:grid-cols-5 gap-4 pr-[5px] relative mt-2">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 pr-[5px] relative mt-2">
           <div className="absolute flex gap-2 left-0 -translate-y-full -top-2 text-white">
-            <button className="Dashboard_button__ct62Q font-medium py-2 px-4 rounded-sm relative z-10">
+            <button className="Dashboard_button font-medium py-2 px-4 rounded-sm relative z-10">
               Claim All
             </button>
-            <button className="Dashboard_button__ct62Q font-medium py-2 px-4 rounded-sm relative z-10">
+            <button className="Dashboard_button font-medium py-2 px-4 rounded-sm relative z-10">
               Compound All
             </button>
           </div>
           <div className="absolute flex gap-2 right-0 -translate-y-full -top-2 text-white">
-            <button className="Dashboard_button__ct62Q hidden lg:block font-medium py-2 px-4 rounded-sm relative z-10">
+            <button className="Dashboard_button hidden lg:block font-medium py-2 px-4 rounded-sm relative z-10">
               Select
             </button>
-            <label className="Dashboard_button__ct62Q hidden lg:block px-2 py-2 text-white relative cursor-pointer">
+            <label className="Dashboard_button hidden lg:block px-2 py-2 text-white relative cursor-pointer">
               Hide retired
               <input
                 type="checkbox"
                 name=""
                 id=""
                 className="accent-pinky"
-                value="false"
               />
             </label>
           </div>
@@ -78,10 +60,10 @@ function AccountPage({ }: Props) {
               <input
                 className="w-full font-semibold bg-transparent outline-none appearance-none border-b border-pinky border-opacity-50 focus:border-opacity-100 transition-all duration-150 text-center"
                 placeholder="Name"
-                value=""
+
               />
               <img
-                src="/static/media/random.b721e3b3eb29413e51f3.png"
+                src="/images/random.png"
                 className="py-4"
               />
             </div>
@@ -89,7 +71,7 @@ function AccountPage({ }: Props) {
               <div className="flex flex-col items-start w-full">
                 <div className="flex justify-between w-full">
                   <h1 className="text-sm opacity-50">Locked Amount:</h1>
-                  <button className="Dashboard_button__ct62Q text-sm px-2 rounded-sm relative z-10 w-[75px]">
+                  <button className="Dashboard_button text-sm px-2 rounded-sm relative z-10 w-[75px]">
                     Max
                   </button>
                 </div>
@@ -97,7 +79,7 @@ function AccountPage({ }: Props) {
                   <input
                     className="w-2/3 bg-transparent outline-none appearance-none border-b border-pinky border-opacity-50 focus:border-opacity-100 transition-all duration-150"
                     placeholder="Deposit"
-                    value=""
+
                   />
                   <h1 className="ml-2 font-medium">$BANDIT</h1>
                 </div>
@@ -125,7 +107,7 @@ function AccountPage({ }: Props) {
               </div>
             </div>
             <div className="flex w-full gap-2">
-              <button className="Dashboard_button__ct62Q font-medium w-full py-2 mt-4 rounded-sm relative z-10">
+              <button className="Dashboard_button font-medium w-full py-2 mt-4 rounded-sm relative z-10">
                 Approve
               </button>
             </div>
@@ -134,22 +116,21 @@ function AccountPage({ }: Props) {
         <h1 className="Dashboard_heading__SF4VX font-pricedown text-4xl md:text-6xl text-white relative pb-4 mb-4">
           nft lookup
         </h1>
-        <div className="w-1/4 flex flex-col items-center justify-center gap-8 pb-12">
-          <div className="Dashboard_card__2gsFM relative bg-darky text-white text-center flex flex-col w-full p-6">
+        <div className="w-3/4 lg:w-1/4 flex flex-col items-center justify-center gap-8 pb-12">
+          <div className="Dashboard_card relative bg-darky text-white text-center flex flex-col w-full p-6">
             <div className="flex w-full flex-col">
               <div className="flex justify-between">
                 <div className="opacity-50">Look up ID</div>
               </div>
               <div className="flex items-center justify-center border-b border-pinky">
                 <input
-                  className=" h-full z-20 w-full flex-1 outline-none bg-transparent py-3 opacity-100 disabled:cursor-not-allowed"
+                  className="h-full z-20 w-full flex-1 outline-none bg-transparent py-3 opacity-100 disabled:cursor-not-allowed"
                   placeholder="0"
-                  value=""
                 />
               </div>
             </div>
             <div className="flex justify-center items-center w-full pt-6">
-              <button className="Dashboard_button__ct62Q font-medium w-full py-2 rounded-sm relative z-10">
+              <button className="Dashboard_button font-medium w-full py-2 rounded-sm relative z-10">
                 Look up
               </button>
             </div>

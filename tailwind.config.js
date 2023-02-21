@@ -8,6 +8,7 @@ module.exports = {
       },
       colors: {
         darky: "rgb(10 3 11)",
+        pinky: "rgb(209 138 220)",
       },
     },
   },

@@ -26,6 +26,11 @@ const routes = [
     },
     {
         id: 4,
+        href: "/diceroll",
+        title: "Dice Roll"
+    },
+    {
+        id: 5,
         href: "/stashhouse",
         title: "Stash House"
     },
@@ -180,7 +185,7 @@ const Sidebar = (props: Props) => {
 
             <div >
                 <div className={clsx(
-                    "hidden lg:flex w-1/5  text-white ",
+                    "hidden lg:flex w-1/6  text-white ",
                     "bg-black mt-20 lg:mt-0 flex fixed h-full z-40  ease-in-out duration-300 top-0 left-0 "
                 )}>
                     <div className="flex opacity-95 overflow-auto z-50 lg:z-0 lg:flex w-full py-12 justify-between items-center flex-col bg-darky shadow-2xl">

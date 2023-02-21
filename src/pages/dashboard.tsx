@@ -1,27 +1,13 @@
+import HeaderCard from "../components/common/HeaderCard";
 import styles from "./dashboard.module.css"
 import clsx from "clsx"
 type Props = {};
 
 const DashboardPage = (props: Props) => {
     return (
-        <div className=" h-screen relative w-10/12 flex flex-col items-center">
-            <div className="w-10/12 relative ">
-                <div className={
-                    clsx(
-                        " hidden lg:flex absolute bg-black px-4 h-12 left-0 top-10 text-cyan-400 justify-center items-center",
-                        styles.Header_card
-                    )
-                }>
-                    $0.2102
-                </div>
-                <div className={clsx(
-                    " hidden lg:flex justify-self-center  absolute bg-black px-4 h-12 right-0 top-10 text-cyan-400 justify-center items-center cursor-pointer gap-2",
-                    styles.Header_card
-                )}>
-                    <button className="h-full">Connect Wallet</button>
-                </div>
-            </div>
-            <div className=" flex flex-col justify-center items-center w-10/12 flex-1">
+        <div className=" h-screen relative flex flex-col items-center">
+            <HeaderCard />
+            <div className=" flex flex-col justify-center items-center w-11/12 flex-1">
                 <h1 className={clsx(
                     " font-pricedown text-4xl md:text-6xl text-white relative pb-4 mb-4",
                     styles.Dashboard_heading

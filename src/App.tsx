@@ -1,7 +1,7 @@
 import './App.css';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { BaseLayout } from './components/common';
-import { DashboardPage, NotFoundPage, AccountPage, BlackMarketPage, StashHousePage } from './pages';
+import { DashboardPage, NotFoundPage, AccountPage, BlackMarketPage, StashHousePage, DiceRollPage } from './pages';
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
           <Route path="account" element={<AccountPage />} />
           <Route path="swap" element={<BlackMarketPage />} />
           <Route path="stashhouse" element={<StashHousePage />} />
+          <Route path="diceroll" element={<DiceRollPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
